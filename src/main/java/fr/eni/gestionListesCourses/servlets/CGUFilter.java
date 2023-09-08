@@ -33,10 +33,10 @@ public class CGUFilter implements Filter {
 					chain.doFilter(request, response);
 				}
 			}
+		} else {
+			RequestDispatcher rd = request.getRequestDispatcher("/validationCGU");
+			rd.forward(request, response);
 		}
-
-		RequestDispatcher rd = request.getRequestDispatcher("/validationCGU");
-		rd.forward(request, response);
 
 		
 	}
