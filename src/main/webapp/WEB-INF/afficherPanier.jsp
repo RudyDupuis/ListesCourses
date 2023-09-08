@@ -14,8 +14,8 @@
 	<h2>Mon panier</h2>
 	
 	<c:forEach items="${lignes}" var="ligne">
-		<c:if test="${ligne.buy == false}">
-    		<c:out value="${ligne.article}" />
+		<c:if test="${!ligne.buy}">
+    		<p>${ligne.article}"</p>
     		
     		<form method="POST" action="mon-panier">
     			<input type="hidden" name="listeId" value="${idLigne}" />
@@ -30,6 +30,7 @@
 	<p>${message}</p>
 
 	<a href="mes-listes">Revenir à mes listes</a>
+	
 	<form method="POST" action="mon-panier">
 		<input type="hidden" name="listeId" value="${idLigne}" />
     	<input type="submit" value="Retablir le panier" name="action"/>

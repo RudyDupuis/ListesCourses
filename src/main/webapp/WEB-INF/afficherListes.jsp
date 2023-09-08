@@ -12,17 +12,14 @@
 	<h2>Mes liste</h2>
 	
 	<c:forEach items="${listes}" var="liste">
-    	<c:out value="${liste.title}" />
+    	<p>${liste.title}</p>
     	
     	<form method="POST" action="mes-listes">
     		<input type="hidden" name="listeId" value="${liste.id}" />
     		<input type="submit" value="Supprimer" name="action"/>
-    	</form>
-    	
-    	<form method="POST" action="mes-listes">
-    		<input type="hidden" name="listeId" value="${liste.id}" />
     		<input type="submit" value="Voir la liste" name="action"/>
     	</form>
+    	
     	<br>
 	</c:forEach>
 	

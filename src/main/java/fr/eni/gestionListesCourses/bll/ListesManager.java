@@ -8,6 +8,7 @@ import fr.eni.gestionListesCourses.dal.DAOFactory;
 import fr.eni.gestionListesCourses.dal.ListesDAO;
 
 public class ListesManager {
+	//TODO singleton interface
 	ListesDAO dao = DAOFactory.getListesCoursesDAO();
 	
 	public void addListe(Liste liste) throws Exception {
